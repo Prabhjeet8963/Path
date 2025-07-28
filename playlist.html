@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nitnem - Playlist</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#007bff">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
 </head>
 <body>
     <div class="container">
@@ -17,18 +21,45 @@
 
         <main class="playlist-container">
             <div class="video-section">
-                <div id="player" class="video-player"></div>
+                <div class="video-header">
+                    <h2 class="section-title">Nitnem Playlist</h2>
+                    <p class="section-subtitle">Daily Sikh Prayers</p>
+                </div>
+                
+                <div id="player" class="video-player">
+                    <div class="player-placeholder">
+                        <div class="placeholder-icon">🎵</div>
+                        <p>Select a prayer to begin</p>
+                    </div>
+                </div>
                 
                 <div class="controls">
-                    <button id="playBtn" class="control-btn primary">Play</button>
-                    <button id="stopBtn" class="control-btn">Stop</button>
-                    <button id="prevBtn" class="control-btn">Previous</button>
-                    <button id="nextBtn" class="control-btn">Next</button>
+                    <button id="playBtn" class="control-btn primary">
+                        <span class="btn-icon">▶️</span>
+                        <span class="btn-text">Play</span>
+                    </button>
+                    <button id="stopBtn" class="control-btn">
+                        <span class="btn-icon">⏹️</span>
+                        <span class="btn-text">Stop</span>
+                    </button>
+                    <button id="prevBtn" class="control-btn">
+                        <span class="btn-icon">⏮️</span>
+                        <span class="btn-text">Previous</span>
+                    </button>
+                    <button id="nextBtn" class="control-btn">
+                        <span class="btn-icon">⏭️</span>
+                        <span class="btn-text">Next</span>
+                    </button>
                 </div>
             </div>
 
             <div class="playlist-section">
-                <h2 class="playlist-title">Video Playlist</h2>
+                <div class="playlist-header">
+                    <h2 class="playlist-title">Prayer Sequence</h2>
+                    <div class="progress-indicator">
+                        <span id="progressText">0 of 8</span>
+                    </div>
+                </div>
                 <div id="videoList" class="video-list">
                     <!-- Video list will be populated by JavaScript -->
                 </div>

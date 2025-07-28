@@ -1,4 +1,4 @@
-const CACHE_NAME = 'path-app-v1';
+const CACHE_NAME = 'nitnem-app-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,9 +6,12 @@ const urlsToCache = [
   '/styles.css',
   '/script.js',
   '/playlist.js',
-  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
-  'https://www.youtube.com/iframe_api'
+  '/manifest.json',
+  'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
 ];
+
+// Cache YouTube API separately for better performance
+const YOUTUBE_CACHE = 'youtube-api-v1';
 
 // Install event - cache resources
 self.addEventListener('install', event => {
@@ -23,6 +26,27 @@ self.addEventListener('install', event => {
 
 // Fetch event - serve from cache when offline
 self.addEventListener('fetch', event => {
+  const url = new URL(event.request.url);
+  
+  // Handle YouTube API requests
+  if (url.hostname === 'www.youtube.com') {
+    event.respondWith(
+      caches.open(YOUTUBE_CACHE).then(cache => {
+        return cache.match(event.request).then(response => {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request).then(networkResponse => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        });
+      })
+    );
+    return;
+  }
+  
+  // Handle other requests
   event.respondWith(
     caches.match(event.request)
       .then(response => {
@@ -31,8 +55,13 @@ self.addEventListener('fetch', event => {
           return response;
         }
         return fetch(event.request);
-      }
-    )
+      })
+      .catch(() => {
+        // Return offline page if network fails
+        if (event.request.destination === 'document') {
+          return caches.match('/index.html');
+        }
+      })
   );
 });
 

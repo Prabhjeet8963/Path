@@ -1,6 +1,6 @@
 # Nitnem
 
-A web application featuring a curated playlist of  Sikh Daily prayers with automatic sequential playback.
+A web application featuring a curated playlist ofSikh Daily prayers with automatic sequential playback.
 
 ## Features
 
@@ -19,14 +19,15 @@ A web application featuring a curated playlist of  Sikh Daily prayers with autom
 
 ### Playlist Page
 - YouTube player with custom controls
-- 7 Sikh prayers in sequence:
+- 8 Sikh prayers in sequence:
   1. Japji Sahib
   2. Jaap Sahib
   3. Tav Prashad Savaiye
   4. Chaupai Sahib
   5. Anand Sahib
   6. Rehras Sahib
-  7. Simran
+  7. Sohaila Sahib
+  8. Simran
 
 ## Visit
 

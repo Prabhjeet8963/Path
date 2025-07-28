@@ -1,6 +1,10 @@
-// YouTube Playlist Manager
+/**
+ * YouTube Playlist Manager
+ * Handles video playback, sequencing, and user controls for Nitnem prayers
+ */
 class YouTubePlaylist {
     constructor() {
+        // Define the playlist of Sikh prayers in order
         this.videos = [
             {
                 id: 'FJlBFhE0J4w',
@@ -33,12 +37,18 @@ class YouTubePlaylist {
                 url: 'https://www.youtube.com/watch?v=RRt5f0eAp4I'
             },
             {
+                id: '5S1LEg6MzdQ',
+                title: '7. Sohaila Sahib',
+                url: 'https://www.youtube.com/watch?v=5S1LEg6MzdQ'
+            },
+            {
                 id: 'gyA4SukHK-E',
-                title: '7. Simran',
+                title: '8. Simran',
                 url: 'https://www.youtube.com/watch?v=gyA4SukHK-E'
             }
         ];
         
+        // Initialize playlist state
         this.currentVideoIndex = 0;
         this.player = null;
         this.isPlaying = false;
@@ -64,6 +74,7 @@ class YouTubePlaylist {
         if (!window.YT) {
             const tag = document.createElement('script');
             tag.src = 'https://www.youtube.com/iframe_api';
+            tag.async = true;
             const firstScriptTag = document.getElementsByTagName('script')[0];
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         } else {
@@ -111,10 +122,28 @@ class YouTubePlaylist {
         }
     }
 
+    /**
+     * Handle YouTube player errors gracefully
+     * @param {Object} event - YouTube player error event
+     */
     onPlayerError(event) {
         console.error('YouTube player error:', event.data);
-        // Try to load next video on error
-        this.nextVideo();
+        
+        // Error codes: 2 (invalid video), 5 (HTML5 error), 100 (video not found), 101/150 (embedding not allowed)
+        const errorCode = event.data;
+        
+        if (errorCode === 2 || errorCode === 100 || errorCode === 101 || errorCode === 150) {
+            // Video unavailable, try next video
+            console.log('Video unavailable, loading next video...');
+            this.nextVideo();
+        } else {
+            // Other errors, retry current video after delay
+            setTimeout(() => {
+                if (this.player && this.player.loadVideoById) {
+                    this.player.loadVideoById(this.videos[this.currentVideoIndex].id);
+                }
+            }, 3000);
+        }
     }
 
     onVideoEnded() {
@@ -192,6 +221,12 @@ class YouTubePlaylist {
             this.updateVideoList();
             this.updateControls();
             
+            // Remove placeholder
+            const placeholder = document.querySelector('.player-placeholder');
+            if (placeholder) {
+                placeholder.style.display = 'none';
+            }
+            
             // Auto-play if sequence is enabled
             if (this.isAutoPlayEnabled) {
                 setTimeout(() => {
@@ -227,6 +262,7 @@ class YouTubePlaylist {
 
     updateVideoList() {
         const videoItems = document.querySelectorAll('.video-item');
+        const progressText = document.getElementById('progressText');
         
         videoItems.forEach((item, index) => {
             item.classList.remove('active', 'completed');
@@ -237,6 +273,11 @@ class YouTubePlaylist {
                 item.classList.add('completed');
             }
         });
+        
+        // Update progress indicator
+        if (progressText) {
+            progressText.textContent = `${this.currentVideoIndex + 1} of ${this.videos.length}`;
+        }
     }
 
     markVideoAsCompleted(index) {
