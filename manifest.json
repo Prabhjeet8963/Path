@@ -1,7 +1,7 @@
 {
-  "name": "Path - Curated Flow of Knowledge",
-  "short_name": "Path",
-  "description": "A curated playlist of Sikh prayers with custom playback behavior",
+  "name": "Nitnem - Daily Sikh Prayers",
+  "short_name": "Nitnem",
+  "description": "A curated playlist of Sikh daily prayers with automatic sequential playback",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

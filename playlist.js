@@ -121,15 +121,13 @@ class YouTubePlaylist {
         this.markVideoAsCompleted(this.currentVideoIndex);
         
         if (this.currentVideoIndex < this.videos.length - 1) {
-            // Auto-play next video if enabled
-            if (this.isAutoPlayEnabled) {
-                setTimeout(() => {
-                    this.nextVideo();
-                }, 1000);
-            } else {
-                this.isPlaying = false;
-                this.updateControls();
-            }
+            // Auto-play next video
+            setTimeout(() => {
+                this.nextVideo();
+                if (this.player && this.player.playVideo) {
+                    this.player.playVideo();
+                }
+            }, 1000);
         } else {
             // Last video ended - stop playback
             this.isPlaying = false;
@@ -193,6 +191,15 @@ class YouTubePlaylist {
             this.player.loadVideoById(this.videos[index].id);
             this.updateVideoList();
             this.updateControls();
+            
+            // Auto-play if sequence is enabled
+            if (this.isAutoPlayEnabled) {
+                setTimeout(() => {
+                    if (this.player && this.player.playVideo) {
+                        this.player.playVideo();
+                    }
+                }, 1500);
+            }
         }
     }
 
@@ -278,9 +285,9 @@ class YouTubePlaylist {
                 background: var(--bg-secondary);
                 border-radius: 12px;
             ">
-                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Journey Complete! 🎉</h2>
+                <h2 style="color: var(--accent-color); margin-bottom: 1rem;">Nitnem Complete</h2>
                 <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                    You've successfully completed all videos in the Path playlist.
+                    You have completed your daily Nitnem prayers.
                 </p>
                 <button onclick="location.reload()" style="
                     background: var(--accent-color);
@@ -290,7 +297,7 @@ class YouTubePlaylist {
                     border-radius: 8px;
                     cursor: pointer;
                     font-weight: 500;
-                ">Restart Journey</button>
+                ">Start Again</button>
             </div>
         `;
         
