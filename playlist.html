@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path - Playlist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Path</h1>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+
+        <main class="playlist-container">
+            <div class="video-section">
+                <div id="player" class="video-player"></div>
+                
+                <div class="controls">
+                    <button id="playBtn" class="control-btn primary">Play</button>
+                    <button id="stopBtn" class="control-btn">Stop</button>
+                    <button id="prevBtn" class="control-btn">Previous</button>
+                    <button id="nextBtn" class="control-btn">Next</button>
+                </div>
+            </div>
+
+            <div class="playlist-section">
+                <h2 class="playlist-title">Video Playlist</h2>
+                <div id="videoList" class="video-list">
+                    <!-- Video list will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon">🌙</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="playlist.js"></script>
+</body>
+</html> 
