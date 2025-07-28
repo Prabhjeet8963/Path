@@ -31,6 +31,11 @@ class YouTubePlaylist {
                 id: 'RRt5f0eAp4I',
                 title: '6. Ardas',
                 url: 'https://www.youtube.com/watch?v=RRt5f0eAp4I'
+            },
+            {
+                id: 'gyA4SukHK-E',
+                title: '7. Simran',
+                url: 'https://www.youtube.com/watch?v=gyA4SukHK-E'
             }
         ];
         

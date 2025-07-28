@@ -27,7 +27,7 @@ A responsive web application featuring a curated playlist of 6 YouTube videos wi
 
 ## ▶️ Video Playlist
 
-The application features 6 carefully curated Sikh prayers in this specific order:
+The application features 7 carefully curated Sikh prayers in this specific order:
 
 1. **Japji Sahib**: The opening prayer of the Guru Granth Sahib
 2. **Jaap Sahib**: A composition by Guru Gobind Singh Ji  
@@ -35,6 +35,7 @@ The application features 6 carefully curated Sikh prayers in this specific order
 4. **Chaupai Sahib**: A prayer for protection and strength
 5. **Anand Sahib**: The prayer of bliss and joy
 6. **Ardas**: The Sikh prayer of supplication
+7. **Simran**: Meditation and remembrance of the Divine
 
 ## 🧭 Controls
 
