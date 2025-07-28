@@ -1,8 +1,8 @@
-# Path - Curated Flow of Knowledge
+# Nitnem - Sikh Prayer Playlist
 
-A responsive web application featuring a curated playlist of 6 YouTube videos with custom playback behavior and smooth transitions.
+A responsive web application featuring a curated playlist of 7 Sikh prayers with custom playback behavior and smooth transitions.
 
-## 🎯 Features
+## Features
 
 - **Sequential Video Playback**: Automatically plays videos in sequence with smooth transitions
 - **Custom Controls**: Play, Stop, Previous, and Next buttons for full control
@@ -11,33 +11,29 @@ A responsive web application featuring a curated playlist of 6 YouTube videos wi
 - **Video Progress Tracking**: Visual indicators for completed, current, and upcoming videos
 - **Auto-Stop**: Playback stops after the final video (no looping)
 - **Modern UI**: Clean, minimalist design with smooth animations
+- **Offline Support**: Works offline after initial visit
 
-## 📄 Pages
+## Pages & Structure
 
 ### Home Page (`index.html`)
-- Welcome message with gradient title
-- "Start Journey" button to navigate to playlist
-- Theme toggle for dark/light mode
+- **Title:** Nitnem  
+- **Button:** Arambh/Start → Navigates to Playlist Page  
+- **Theme:** Toggle between Light/Dark Mode  
 
 ### Playlist Page (`playlist.html`)
-- Embedded YouTube player with custom controls
-- Video playlist sidebar with progress indicators
-- Full navigation controls
+- Embedded YouTube player with custom controls  
+- Sidebar with 7 Sikh prayers in this order:
+  1. Japji Sahib  
+  2. Jaap Sahib  
+  3. Tav Prashad Savaiye  
+  4. Chaupai Sahib  
+  5. Anand Sahib  
+  6. Rehras Sahib  
+  7. Simran  
+- Navigation controls
 - Completion message after final video
 
-## ▶️ Video Playlist
-
-The application features 7 carefully curated Sikh prayers in this specific order:
-
-1. **Japji Sahib**: The opening prayer of the Guru Granth Sahib
-2. **Jaap Sahib**: A composition by Guru Gobind Singh Ji  
-3. **Tav Parshad Savaiye**: Sacred verses from the Guru Granth Sahib
-4. **Chaupai Sahib**: A prayer for protection and strength
-5. **Anand Sahib**: The prayer of bliss and joy
-6. **Rehras Sahib**: The evening prayer
-7. **Simran**: Meditation and remembrance of the Divine
-
-## 🧭 Controls
+## Controls
 
 - **Play**: Start the sequence from the beginning or current video
 - **Stop**: Halt playback at any point
@@ -45,7 +41,7 @@ The application features 7 carefully curated Sikh prayers in this specific order
 - **Next**: Navigate to the next video
 - **Video List**: Click any video to jump directly to it
 
-## 💻 Tech Stack
+## Tech Stack
 
 - **HTML5**: Semantic markup with accessibility features
 - **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
@@ -53,13 +49,13 @@ The application features 7 carefully curated Sikh prayers in this specific order
 - **YouTube IFrame API**: For video embedding and control
 - **Inter Font**: Clean, modern typography
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Path.git
+git clone https://github.com/Prabhjeet8963/Path.git
 cd Path
 ```
 
@@ -84,9 +80,9 @@ The application is designed to be deployed on GitHub Pages:
 1. Push your code to a GitHub repository
 2. Go to repository Settings > Pages
 3. Select "Deploy from a branch" and choose `main`
-4. Your site will be available at `https://yourusername.github.io/Path`
+4. Your site will be available at `https://prabhjeet8963.github.io/Path`
 
-## 🎨 Design Features
+## Design Features
 
 - **Responsive Grid Layout**: Adapts to different screen sizes
 - **Smooth Transitions**: CSS animations for video changes and interactions
@@ -94,14 +90,14 @@ The application is designed to be deployed on GitHub Pages:
 - **Theme Persistence**: Remembers user's theme preference
 - **Loading States**: Visual feedback for user interactions
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome 60+
 - Firefox 55+
 - Safari 12+
 - Edge 79+
 
-## 🔧 Customization
+## Customization
 
 ### Adding Videos
 
@@ -122,18 +118,18 @@ this.videos = [
 
 The application uses CSS custom properties for easy theming. Modify the `:root` variables in `styles.css` to change colors and styling.
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions, please open an issue on GitHub.
 
 ---
 
-**Path** - Where knowledge flows seamlessly. 🌟 
+**Nitnem** - Sikh Prayer Playlist 
