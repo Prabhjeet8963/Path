@@ -29,7 +29,7 @@ class YouTubePlaylist {
             },
             {
                 id: 'RRt5f0eAp4I',
-                title: '6. Ardas',
+                title: '6. Rehras Sahib',
                 url: 'https://www.youtube.com/watch?v=RRt5f0eAp4I'
             },
             {

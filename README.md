@@ -34,7 +34,7 @@ The application features 7 carefully curated Sikh prayers in this specific order
 3. **Tav Parshad Savaiye**: Sacred verses from the Guru Granth Sahib
 4. **Chaupai Sahib**: A prayer for protection and strength
 5. **Anand Sahib**: The prayer of bliss and joy
-6. **Ardas**: The Sikh prayer of supplication
+6. **Rehras Sahib**: The evening prayer
 7. **Simran**: Meditation and remembrance of the Divine
 
 ## 🧭 Controls
