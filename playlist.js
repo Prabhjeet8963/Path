@@ -4,32 +4,32 @@ class YouTubePlaylist {
         this.videos = [
             {
                 id: 'FJlBFhE0J4w',
-                title: 'Video 1: Introduction to the Journey',
+                title: '1. Japji Sahib',
                 url: 'https://www.youtube.com/watch?v=FJlBFhE0J4w'
             },
             {
                 id: 'MbC9pGsY2Ag',
-                title: 'Video 2: Building Foundations',
+                title: '2. Jaap Sahib',
                 url: 'https://www.youtube.com/watch?v=MbC9pGsY2Ag'
             },
             {
                 id: 'Gks0Q9v1aRI',
-                title: 'Video 3: Exploring New Horizons',
+                title: '3. Tav Parshad Savaiye',
                 url: 'https://www.youtube.com/watch?v=Gks0Q9v1aRI'
             },
             {
                 id: 'B1pYt8HaEBY',
-                title: 'Video 4: Deepening Understanding',
+                title: '4. Chaupai Sahib',
                 url: 'https://www.youtube.com/watch?v=B1pYt8HaEBY'
             },
             {
                 id: '67zW9q-_LYQ',
-                title: 'Video 5: Advanced Concepts',
+                title: '5. Anand Sahib',
                 url: 'https://www.youtube.com/watch?v=67zW9q-_LYQ'
             },
             {
                 id: 'RRt5f0eAp4I',
-                title: 'Video 6: Final Integration',
+                title: '6. Ardas',
                 url: 'https://www.youtube.com/watch?v=RRt5f0eAp4I'
             }
         ];
