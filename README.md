@@ -1,6 +1,6 @@
 # Nitnem
 
-A web application featuring a curated playlist ofSikh Daily prayers with automatic sequential playback.
+A web application featuring a curated playlist of Sikh Daily prayers with automatic sequential playback.
 
 ## Features
 
