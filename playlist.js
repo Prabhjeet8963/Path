@@ -32,9 +32,9 @@ class YouTubePlaylist {
                 url: 'https://www.youtube.com/watch?v=67zW9q-_LYQ'
             },
             {
-                id: 'RRt5f0eAp4I',
+                id: 'vr8DGObwZwQ', 
                 title: '6. Rehras Sahib',
-                url: 'https://youtu.be/vr8DGObwZwQ?si=TwLnp7ob4HzBA0GB'
+                url: 'https://www.youtube.com/watch?v=vr8DGObwZwQ' 
             },
             {
                 id: '5S1LEg6MzdQ',
