@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --background: #06060a;
+  --foreground: #f4f4f7;
+  --accent-pastel: #e9d5ff; /* Soft lavender */
+  --accent-pastel-hover: #fae8ff; /* Soft pink-purple */
+  --border-subtle: rgba(255, 255, 255, 0.04);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom interactive selections */
+::selection {
+  background-color: rgba(233, 213, 255, 0.15);
+  color: #fae8ff;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* User-requested class structure style integration with ultra-minimal Gen-Z Pastel aesthetics */
+.container {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-noto-gurmukhi), sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.375;
+  color: #ffe4e6; /* Soft pastel rose */
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #cbd5e1; /* Pastel slate */
+  opacity: 0.6;
+  margin-bottom: 3rem;
+}
+
+.gurbani-quote {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gurbani-text {
+  font-family: var(--font-noto-gurmukhi), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fae8ff; /* Soft pastel magenta */
+  line-height: 1.6;
+}
+.gurbani-text + .gurbani-text {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  opacity: 0.5;
+  margin-top: -1.25rem;
+  letter-spacing: 0.025em;
+}
+
+.gurbani-translation {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #fef08a; /* Soft pastel yellow */
+  opacity: 0.8;
+  margin-top: -1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.gurbani-source {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #c8a96e; /* Minimal Gold */
+  opacity: 0.7;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 1.5rem;
+}
+
+/* Custom scrollbars and default selections for gold theme */
+body { background: #0d0d0d; }
+.font-gurmukhi { font-family: 'Noto Sans Gurmukhi', serif; }
+::selection { background: #c8a96e33; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #1e1e1e; border-radius: 2px; }
+::-webkit-scrollbar-track { background: transparent; }
