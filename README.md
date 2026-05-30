@@ -5,12 +5,6 @@
 **An immersive, distraction-free spiritual workspace for daily Gurbani.**<br/>
 *Listen. Breathe. Remember.*
 
-> *ਰਹਿਣੀ ਰਹੈ ਸੋਈ ਸਿਖ ਮੇਰਾ*
->
-> *"Whosoever maintains a code of living is a Sikh of mine."*
->
-> — Rehatnama, Guru Gobind Singh Ji
-
 ## Overview
 
 **Path.io** is a modern spiritual audio platform built for the daily recitation of Nitnem — the prescribed Gurbani prayers of the Sikh faith. Designed with deep intentionality, it strips away every distraction to leave only what matters: the sacred sound, the breath, and the Word.
