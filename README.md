@@ -106,10 +106,11 @@ Path.io uses a single, disciplined colour palette. There are no competing accent
 | Audio Storage | Supabase Storage (public bucket) |
 | Deployment | Vercel |
 
----
+
 
 ## Project Structure
 
+```text
 Path/
 ├── src/
 │   ├── app/
