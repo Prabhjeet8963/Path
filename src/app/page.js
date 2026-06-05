@@ -11,21 +11,21 @@ export default function Home() {
       
       {/* Header Deck */}
       <header className="w-full relative z-10 border-b border-[#1e1e1e] bg-[#0d0d0d]">
-        <div className="w-full max-w-6xl mx-auto flex items-center justify-between p-6 px-8">
+        <div className="w-full max-w-[96%] 2xl:max-w-[1600px] mx-auto flex items-center justify-between p-6 px-8">
           <div className="flex items-center space-x-3.5 group cursor-pointer">
             <span className="text-[#c8a96e] text-2xl font-bold font-gurmukhi transition-transform duration-500 group-hover:rotate-180 select-none">☬</span>
             <span className="text-lg font-bold tracking-tighter text-[#f5f0e8] font-serif">Path.io</span>
           </div>
           <div className="flex items-center space-x-4">
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#c8a96e]/70 uppercase bg-[#161616] border border-[#1e1e1e] px-3 py-1 rounded">
-              nitnem streamer
+              Dhur ki bani
             </span>
           </div>
         </div>
       </header>
 
       {/* Hero Workspace */}
-      <main className="flex-1 w-full max-w-6xl mx-auto px-6 md:px-8 py-12 md:py-20 relative z-10">
+      <main className="flex-1 w-full max-w-[96%] 2xl:max-w-[1600px] mx-auto px-6 md:px-8 py-12 md:py-20 relative z-10">
         
         {/* Intro Branding Badge */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 flex flex-col items-center">
@@ -36,16 +36,12 @@ export default function Home() {
             <span>☬</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#f5f0e8] mb-6 leading-[1.15] max-w-2xl font-gurmukhi">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-[#f5f0e8] mb-2 leading-[1.15] max-w-2xl font-gurmukhi">
             ਵਾਹਿਗੁਰੂ ਜੀ ਕਾ ਖਾਲਸਾ <br />
             <span className="text-[#c8a96e]">
               ਵਾਹਿਗੁਰੂ ਜੀ ਕੀ ਫਤਹਿ ॥
             </span>
           </h2>
-          
-          <p className="text-sm sm:text-base md:text-lg text-[#888888] leading-relaxed max-w-2xl font-medium tracking-wide">
-            immersion, silence, and daily devotion. a highly structured workspace designed to help you connect with your prayers without distraction.
-          </p>
         </div>
 
         {/* Audio Player Deck */}
@@ -60,22 +56,22 @@ export default function Home() {
           />
         </div>
 
-
-
       </main>
 
       {/* Footer */}
       <footer className="w-full py-10 border-t border-[#1e1e1e] bg-[#0d0d0d] relative z-10">
-        <div className="w-full max-w-6xl mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#444444] font-medium tracking-widest uppercase">
-          <p className="mb-4 md:mb-0">© 2026 Path.io — modern spiritual platform.</p>
+        <div className="w-full max-w-[96%] 2xl:max-w-[1600px] mx-auto px-6 md:px-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-[#444444] font-medium tracking-widest uppercase">
+          <p className="mb-4 md:mb-0 normal-case tracking-normal text-center md:text-left">
+            © 2026 Path.io — All rights and content ownership held by Prabhjeet Singh (prabhjeetsingh8963@gmail.com). Contact if needed.
+          </p>
           <div className="flex space-x-6">
             <button
               onClick={() => {
-                setActiveSequence([0, 1, 2, 3, 4, 7]);
+                setActiveSequence([1, 2, 3, 4, 5, 8]);
                 setPlayerTrigger({ type: 'nitnem', timestamp: Date.now() });
               }}
               className={`transition duration-300 uppercase tracking-widest text-[11px] font-medium focus:outline-none ${
-                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([0, 1, 2, 3, 4, 7])
+                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([1, 2, 3, 4, 5, 8])
                   ? 'text-[#c8a96e]'
                   : 'text-[#444444] hover:text-[#f5f0e8]'
               }`}
@@ -84,24 +80,24 @@ export default function Home() {
             </button>
             <button
               onClick={() => {
-                setActiveSequence([5, 6, 7]);
-                setPlayerTrigger({ type: 'rehatnama', timestamp: Date.now() });
+                setActiveSequence([1, 2, 3, 4, 5, 6, 7, 8]);
+                setPlayerTrigger({ type: 'reht', timestamp: Date.now() });
               }}
               className={`transition duration-300 uppercase tracking-widest text-[11px] font-medium focus:outline-none ${
-                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([5, 6, 7])
+                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([1, 2, 3, 4, 5, 6, 7, 8])
                   ? 'text-[#c8a96e]'
                   : 'text-[#444444] hover:text-[#f5f0e8]'
               }`}
             >
-              rehatnama
+              reht
             </button>
             <button
               onClick={() => {
-                setActiveSequence([7]);
+                setActiveSequence([8]);
                 setPlayerTrigger({ type: 'simran', timestamp: Date.now() });
               }}
               className={`transition duration-300 uppercase tracking-widest text-[11px] font-medium focus:outline-none ${
-                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([7])
+                activeSequence && JSON.stringify(activeSequence) === JSON.stringify([8])
                   ? 'text-[#c8a96e]'
                   : 'text-[#444444] hover:text-[#f5f0e8]'
               }`}
